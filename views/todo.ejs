@@ -4,6 +4,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"
           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
           crossorigin="anonymous"></script>
+          <script src="/assets/todo-list.js"></script>
           <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
           </head>
     <body>
@@ -14,9 +15,9 @@
                 <button type="submit">Add Item</button>
             </form>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <% for(var i = 0; i < todos.length; i++){ %>
+                    <li><%= todos[i].item %></li>
+                <% } %>
             </ul>
         </div>
     </body>
